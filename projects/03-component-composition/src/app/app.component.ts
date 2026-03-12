@@ -1,14 +1,25 @@
 import { Component } from '@angular/core';
+import { UserinfoComponent } from './userinfo/userinfo.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
+
+  imports: [UserinfoComponent],
+  
   template: `
     <section class="menu">🏠 Home</section>
     <section class="main">
       <h1>Metrics and Figures Dashboard</h1>
       <section class="content">
-        <article class="tile"></article>
+        <article class="tile">
+
+        <app-userinfo/> 
+
+        <!-- This is how we can use the UserinfoComponent inside the AppComponent. We can use it as a custom HTML tag with the selector name of the component.
+        This can also be written with closing tags but since there is no content inside the tag, we can use the self-closing tag syntax. -->
+
+        </article>
         <article class="tile">
           <img src="/assets/noun-pie-chart-6331100-C462DD.png" height="300" />
         </article>
